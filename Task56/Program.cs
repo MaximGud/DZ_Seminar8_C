@@ -11,7 +11,14 @@
 // 5 2 6 7
 
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
-
+/// <summary>
+/// Метод создания двумерного массива и наполнения его рандомными числами
+/// </summary>
+/// <param name="rows">количество строк массива</param>
+/// <param name="cols">количество столбцов массива</param>
+/// <param name="min">минимальное значение элемента массива</param>
+/// <param name="max">максимальное значение элемента массива</param>
+/// <returns>возвращает двумерный массив</returns>
 int[,] GetArray(int rows, int cols, int min, int max)
 {
   int[,] array = new int[rows, cols];
@@ -24,7 +31,10 @@ int[,] GetArray(int rows, int cols, int min, int max)
   }
   return array;
 }
-
+/// <summary>
+/// Метод вывода массива на консоль
+/// </summary>
+/// <param name="arr">на вход - двумерный массив</param>
 void PrintArray(int[,] arr)
 {
   for (int i = 0; i < arr.GetLength(0); i++)
@@ -40,6 +50,11 @@ void PrintArray(int[,] arr)
 int[,] matrix = GetArray(3, 3, 0, 10);
 PrintArray(matrix);
 
+/// <summary>
+/// Метод поиска минимальной по сумме строки двумерного массива
+/// </summary>
+/// <param name="matr">на вход вводится двумерный массив</param>
+/// <returns>возвращается номер строки с минимальнйо суммой элементов</returns>
 int FindMinSumString(int[,] matr)
 {
   int[] sums = new int[matr.GetLength(0)];
